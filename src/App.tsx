@@ -1,18 +1,43 @@
-// import Avatar from 'components/Avatar'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
+import { Spin } from 'antd'
 import Layout from 'components/Layout'
-import Menus from 'scripts/Menus'
 import Header from 'components/Header'
-import './index.css'
+import 'antd/dist/antd.css'
+const Home = lazy(
+  () => import(/* webpackChunkName: "Home" */ './scripts/Home/index')
+)
+const Douyin = lazy(
+  () => import(/* webpackChunkName: "Douyin" */ './scripts/Douyin/index')
+)
 
 function App() {
-  return (<>
-    <Header />
-    <Layout>
-      <div className="bg-white">
-        <Menus />
-      </div>
-    </Layout>
-  </>
+  return (
+    <>
+      <Header />
+      <Layout>
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/douyin"
+              element={
+                <Suspense fallback={<Spin />}>
+                  <Douyin />
+                </Suspense>
+              }
+            ></Route>
+            <Route
+              path="/"
+              element={
+                <Suspense fallback={<Spin />}>
+                  <Home />
+                </Suspense>
+              }
+            ></Route>
+          </Routes>
+        </BrowserRouter>
+      </Layout>
+    </>
   )
 }
 

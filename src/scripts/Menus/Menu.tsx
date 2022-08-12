@@ -1,14 +1,32 @@
 import React from 'react'
-import { classNames } from 'utils'
-export default function Menu({ name, icon }: { name: string; icon: string }) {
+import styles from './index.module.less'
+import { Card } from 'antd'
+import { Link } from 'react-router-dom'
+
+export default function Menu({
+  name,
+  icon,
+  router = '/',
+  themeColor
+}: {
+  themeColor: string
+  router?: string
+  name: string
+  icon: string
+}) {
   return (
-    <div
-      className={classNames(`inline-grid w-28-fixed h-28-fixed bg-orange-600 text-center select-none`)}
+    <Card
+      className={styles.card}
+      style={{ background: themeColor }}
+      hoverable
+      bordered={false}
     >
-      <p>
-        <img src={icon} alt={name} />
-      </p>
-      <span>{name}</span>
-    </div>
+      <Link to={router}>
+        <div className={styles.cardItem}>
+          <img src={icon} alt={name} />
+          <span className={styles.colorText}>{name}</span>
+        </div>
+      </Link>
+    </Card>
   )
 }

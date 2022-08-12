@@ -5,6 +5,15 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
+  css: {
+    // css预处理器
+    preprocessorOptions: {
+      less: {
+        charset: false,
+        additionalData: '@import "./src/assets/style/global.less";'
+      }
+    }
+  },
   // prevent vite from obscuring rust errors
   clearScreen: false,
   // Tauri expects a fixed port, fail if that port is not available
