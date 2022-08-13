@@ -1,0 +1,28 @@
+.tips {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+.icon {
+  font-size: 18px;
+  background: #1f212c;
+  color: #51535e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  :global {
+    .anticon {
+      transition: all .3s;
+    }
+  }
+  &:hover {
+    :global {
+      .anticon {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

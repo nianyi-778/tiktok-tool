@@ -4,13 +4,20 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [
+    react(),
+    tsconfigPaths() // 引入插件
+  ],
   css: {
     // css预处理器
     preprocessorOptions: {
       less: {
         charset: false,
-        additionalData: '@import "./src/assets/style/global.less";'
+        javascriptEnabled: true,
+        modifyVars: {
+          //在这里进行主题的修改，参考官方配置属性
+          '@primary-color': '#3a89fe'
+        }
       }
     }
   },

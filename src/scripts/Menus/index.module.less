@@ -1,4 +1,6 @@
 .card {
+  background: #1f212c;
+  box-shadow: 0px 16px 16px rgb(0 0 0 / 8%);
   :global {
     .ant-card-body {
       height: 100%;
@@ -22,38 +24,3 @@
   flex-direction: column;
 }
 
-.colorText {
-  text-align: center;
-  /* 设置背景透明色 */
-  background-image: -webkit-linear-gradient(
-    left,
-    blue,
-    #66ffff 10%,
-    #cc00ff 20%,
-    #cc00cc 30%,
-    #ccccff 40%,
-    #00ffff 50%,
-    #ccccff 60%,
-    #cc00cc 70%,
-    #cc00ff 80%,
-    #66ffff 90%,
-    blue 100%
-  );
-  /* 改变background-size是为了让动画动起来 */
-  background-size: 200% 100%;
-  /* 按照文字拆分背景 */
-  background-clip: text;
-  /* 将字体设置成透明色 */
-  -webkit-text-fill-color: transparent;
-  /* 启用动画 */
-  animation: masked-animation 4s linear infinite;
-}
-
-@keyframes masked-animation {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: -100% 0;
-  }
-}

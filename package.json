@@ -58,6 +58,7 @@
     "react-router-dom": "^6.3.0",
     "typescript": "^4.7.4",
     "vite": "^3.0.4",
-    "vite-tsconfig-paths": "^3.5.0"
+    "vite-tsconfig-paths": "^3.5.0",
+    "xgplayer": "^2.31.7"
   }
 }

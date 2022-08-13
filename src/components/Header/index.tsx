@@ -1,41 +1,40 @@
 import React, { useEffect } from 'react'
 import styles from './index.module.less'
-import { RollbackOutlined } from '@ant-design/icons'
+import {
+  RollbackOutlined,
+  FullscreenOutlined,
+  BorderOutlined,
+  CloseOutlined,
+  MinusOutlined
+} from '@ant-design/icons'
 import useHeaderUtils from '../../hooks/useHeaderUtils'
-// import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 export default function Header() {
+  const location = useLocation()
   useHeaderUtils()
-  // const location = useLocation()
-  // useEffect(() => {
-  //   console.log(location.pathname, 'navigate')
-  // }, [location])
+
+  useEffect(() => {
+    console.log(location.pathname, 'navigate')
+  }, [location])
 
   return (
     <div data-tauri-drag-region className={styles.titlebar}>
-      <div
-        className={styles.titlebarButton}
-        onClick={() => {
-          window.history.back()
-        }}
-      >
-        <RollbackOutlined />
-      </div>
+      {!/^\/$/.test(location.pathname) && (
+        <div className={styles.titlebarButton} id="titlebar-back">
+          <RollbackOutlined />
+        </div>
+      )}
 
       <div id="titlebar-minimize" className={styles.titlebarButton}>
-        <img
-          src="https://api.iconify.design/mdi:window-minimize.svg"
-          alt="minimize"
-        />
+        <MinusOutlined />
       </div>
       <div className={styles.titlebarButton} id="titlebar-maximize">
-        <img
-          src="https://api.iconify.design/mdi:window-maximize.svg"
-          alt="maximize"
-        />
+        {/* <FullscreenOutlined /> */}
+        <BorderOutlined />
       </div>
       <div className={styles.titlebarButton} id="titlebar-close">
-        <img src="https://api.iconify.design/mdi:close.svg" alt="close" />
+        <CloseOutlined />
       </div>
     </div>
   )
