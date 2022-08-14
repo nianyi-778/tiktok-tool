@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import styles from './index.module.less'
 import { DownloadOutlined } from '@ant-design/icons'
 import { Input, Button, message } from 'antd'
 import AntdImage from '../../components/Image'
 import { invoke } from '@tauri-apps/api/tauri'
 import { open } from '@tauri-apps/api/dialog'
+import styles from './index.module.less'
 
 message.config({
   top: 60,
@@ -100,20 +100,19 @@ function Douyin() {
                 if (!dir) {
                   return
                 }
+                setDownloadLoading(true)
                 try {
-                  setDownloadLoading(true)
-                  const filePath = await invoke('download_video', {
+                  await invoke('download_video', {
                     url: douyinData.url,
                     writePath: dir,
                     fileName,
                     id: douyinData.id
                   })
-                  console.log(filePath)
-                  setDownloadLoading(false)
                   message.success(`下载成功`)
                 } catch (error) {
                   message.error('下载失败')
                 }
+                setDownloadLoading(false)
               }}
               // douyinData.originVideo
               type="primary"
@@ -131,14 +130,14 @@ function Douyin() {
               <p>WEB 抖音口令复制</p>
               <AntdImage
                 height={200}
-                src="http://oss.wanfengblog.com/0FBC19DC-6C4D-4f20-B2EA-FD225695548A.png"
+                src="https://oss.lidakai.top/0FBC19DC-6C4D-4f20-B2EA-FD225695548A.png"
               />
             </div>
             <div className={styles.tip}>
               <p>抖音 APP 口令复制</p>
               <AntdImage
                 height={200}
-                src="http://oss.wanfengblog.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220813211820.png"
+                src="https://oss.lidakai.top/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220813211820.png"
               />
             </div>
           </div>

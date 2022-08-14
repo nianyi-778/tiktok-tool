@@ -8,7 +8,7 @@ import AntdImage from '../../components/Image'
 function PopoverContent() {
   return (
     <AntdImage
-      src="http://oss.wanfengblog.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220814000047.jpg"
+      src="https://oss.lidakai.top/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220814000047.jpg"
       height={100}
     />
   )

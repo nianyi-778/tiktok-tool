@@ -7,12 +7,23 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "tauri-app",
+    "productName": "哆啦B梦百宝箱",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "http": {
+        "scope": [
+          "http://**",
+          "https://**"
+        ]
+      },
+      "protocol": {
+        "asset": true,
+        "all": true,
+        "assetScope": ["*"]
+      }
     },
     "bundle": {
       "active": true,
@@ -44,22 +55,27 @@
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
-        "timestampUrl": ""
+        "timestampUrl": "",
+        "wix": {
+          "language": [
+            "zh-CN"
+          ]
+        }
       }
     },
     "security": {
-      "csp": null
+      "csp": "default-src asset: blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
     },
     "updater": {
       "active": false
     },
     "windows": [
       {
-        "decorations":false,
+        "decorations": false,
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "EasyV工具箱",
+        "title": "哆啦B梦百宝箱",
         "width": 800
       }
     ]

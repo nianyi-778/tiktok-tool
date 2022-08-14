@@ -1,16 +1,16 @@
 {
-  "name": "reactjs-vite-tailwindcss-boilerplate",
-  "description": "This is a React + vite boilerplate to be used with Tailwindcss.",
+  "name": "dlbm-utils",
+  "description": "哆啦B梦百宝箱",
   "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "João Paulo Moraes",
-    "email": "joaopaulomoraes@outlook.com",
-    "url": "https://github.com/joaopaulomoraes"
+    "name": "li kai",
+    "email": "likai_360@163.com",
+    "url": "https://gitee.com/likai_admin"
   },
   "bugs": {
-    "url": "https://github.com/joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate/issues",
-    "email": "joaopaulomoraes@outlook.com"
+    "url": "https://gitee.com/likai_admin/tauri-app/issues",
+    "email": "likai_360@163.com"
   },
   "scripts": {
     "dev": "vite",
@@ -58,7 +58,6 @@
     "react-router-dom": "^6.3.0",
     "typescript": "^4.7.4",
     "vite": "^3.0.4",
-    "vite-tsconfig-paths": "^3.5.0",
-    "xgplayer": "^2.31.7"
+    "vite-tsconfig-paths": "^3.5.0"
   }
 }
