@@ -21,6 +21,7 @@ export default function Header() {
           src="https://oss.lidakai.top/dlam.png"
           preview={false}
           height={'100%'}
+          width={'auto'}
         />
         <span>哆啦B梦百宝箱</span>
       </div>
