@@ -1,72 +1,9 @@
-# React Tailwindcss Boilerplate build with Vite
+# desktop app
 
-This is a [ReactJS](https://reactjs.org) + [Vite](https://vitejs.dev) boilerplate to be used with [Tailwindcss](https://tailwindcss.com).
+## tauri+react+antd+rust
 
-## What is inside?
+![](https://oss.lidakai.top/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20221023132455.png)
 
-This project uses many tools like:
+> todo
 
-- [ReactJS](https://reactjs.org)
-- [Vite](https://vitejs.dev)
-- [TypeScript](https://www.typescriptlang.org)
-- [Jest](https://jestjs.io)
-- [Testing Library](https://testing-library.com)
-- [Tailwindcss](https://tailwindcss.com)
-- [Eslint](https://eslint.org)
-- [Prettier](https://prettier.io)
-
-## Getting Started
-
-### Install
-
-Create the project.
-
-```bash
-npx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
-```
-
-Access the project directory.
-
-```bash
-cd my-app
-```
-
-Install dependencies.
-
-```bash
-npm install
-```
-
-Serve with hot reload at <http://localhost:5173>.
-
-```bash
-npm run dev
-```
-
-### Lint
-
-```bash
-npm run lint
-```
-
-### Typecheck
-
-```bash
-npm run typecheck
-```
-
-### Build
-
-```bash
-npm run build
-```
-
-### Test
-
-```bash
-npm run test
-```
-
-## License
-
-This project is licensed under the MIT License.
+抖音工具箱
